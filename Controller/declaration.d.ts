@@ -1,1 +1,1 @@
-// declare module "*nodemailer-sendinblue-transport";
+declare module "nodemailer-sendinblue-transport";
