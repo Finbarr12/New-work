@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
-import sendInBlueTransport from "nodemailer-sendinblue-transport";
+import sendInBlueTransport from "sendinblue-api";
 import EnvironmentVariables from "../Environment/envVariables";
 
 // import { google } from "googleapis";

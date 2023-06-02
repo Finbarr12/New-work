@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Mailer = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
-const nodemailer_sendinblue_transport_1 = __importDefault(require("nodemailer-sendinblue-transport"));
+const sendinblue_api_1 = __importDefault(require("sendinblue-api"));
 const envVariables_1 = __importDefault(require("../Environment/envVariables"));
 // import { google } from "googleapis";
 // const GOOGLE_ID =
@@ -29,7 +29,7 @@ const Mailer = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, messages, subject } = req.body;
     try {
         // const getAccessToken: any = (await oAuth.getAccessToken()).token;
-        const transport = nodemailer_1.default.createTransport(new nodemailer_sendinblue_transport_1.default({
+        const transport = nodemailer_1.default.createTransport(new sendinblue_api_1.default({
             apiKey: envVariables_1.default.send_in_blue,
         }));
         const message = {
